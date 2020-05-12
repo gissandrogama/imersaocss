@@ -7,6 +7,7 @@ body {
 
 .bg-img {
     position: absolute;
+    margin: 0 auto;
     left: 0;
     right: 0;
     z-index: 1;
@@ -27,8 +28,8 @@ body {
 }
 
 .menu {
-    margin: 10px auto;
-    
+    margin: 10px 0 20px 0;
+    font-size: 18px;   
 }
   
 .menu ul {
@@ -41,7 +42,7 @@ body {
 }
   
 a {
-    color: teal;
+    color:#FFF;
     text-decoration: none;
 }
   
