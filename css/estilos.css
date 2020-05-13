@@ -1,35 +1,43 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400;1,700&display=swap');
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+  
 body {
-    font-family: Arial;    
-}
-
-.bg-img {
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    display: block;
-    background-image: url('../imagens/background.jpg');
-    background-size: auto 100vh;
+    background: #000;
     height: 100vh;
-    filter: blur(5px);
+    font-family: Roboto, Arial, Helvetica, sans-serif;
 }
-
-.content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    margin-left: 20px;
-    margin-right: 20px;
+  
+@media (min-width: 400px) {
+    body {
+        font-size: 18px;
+    }
 }
-
+  
+@media (min-width: 600px) {
+    body {
+        font-size: 22px;
+    }
+}
+  
+header {
+    margin-bottom: 50px;
+    background-image: url('../imagens/background.jpg');
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
 .menu {
-    margin: 10px 0 20px 0;
-    font-size: 18px;   
+    background-color: rgba(8, 8, 8, 0.459);
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
   
 .menu ul {
@@ -38,24 +46,62 @@ body {
 }
   
 .menu li {
-    list-style: none; 
+    list-style: none;
 }
   
-a {
-    color:#FFF;
+.menu a {
+    color:rgb(255, 115, 0);
+    display: block;
+    padding: 10px;
     text-decoration: none;
 }
   
-a:hover {
-   text-decoration: underline;
-}
-  
-.site-subtitle, 
 .site-title {
-  color: whitesmoke;
-  text-align: center;
+    color: whitesmoke;
+    text-align: center;
 }
   
 .site-subtitle {
- font-style: italic;
+    color: rgb(255, 115, 0);
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 2em;
+}
+
+section {    
+    color: #FFF;       
+}
+
+.service {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;     
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;       
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: ;
+    padding: 10px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px rgb(255, 115, 0);
+}
+
+.img-portfolio { 
+    max-width: 400px;   
+    width: 100%;   
+    padding: 10px;  
+}
+
+.service img {
+    width: 90%;
+    border-radius: 20px;  
 }
