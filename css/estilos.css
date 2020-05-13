@@ -70,7 +70,8 @@ header {
 }
 
 section {    
-    color: #FFF;       
+    color: #FFF;
+    height: 100vh;        
 }
 
 .service {
@@ -81,7 +82,7 @@ section {
 section h2 {
     text-align: center;
     font-size: 2em;
-    margin-bottom: 20px;       
+    margin-bottom: 20px;      
 }
 
 figure {
@@ -93,6 +94,7 @@ figure {
     margin: 5px 5px 5px 5px;
     border-radius: 5px;
     box-shadow: 2px 2px 7px rgb(255, 115, 0);
+    width: 400px;
 }
 
 .img-portfolio { 
