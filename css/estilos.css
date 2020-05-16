@@ -47,6 +47,7 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 1;
 }
   
 .menu ul {
@@ -59,21 +60,44 @@ header {
 }
   
 .menu a {
-    color:rgb(255, 115, 0);
     display: block;
     padding: 10px 20px;
-    text-decoration: none;
+    transition: background-color 1s, color 1s;    
+}
+
+.menu a:active,
+.menu a:hover {
+    background-color: rgb(255, 115, 0);
+    color: whitesmoke;
 }
 
 a {
-    color: teal;
-    text-decoration: none;
+    color: rgb(255, 115, 0);
+    text-decoration: none;    
 }
   
 a:hover {
     text-decoration: underline;
 }
-  
+
+.titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: ease 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+    from {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.site-subtitle,
 .site-title {
     color: whitesmoke;
     text-align: center;
@@ -87,16 +111,18 @@ a:hover {
 .site-subtitle {
     color: rgb(255, 115, 0);
     font-style: italic;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 2em;
+    font-family: 'Source Code Pro', monospace;    
     line-height: 1.8em;
+    text-align: center;
 }
 
+.contato,
 .portfolio {
     padding: 2em;
-    height: calc(100vh - 41px);
+    min-height: 100vh;
 }
 
+.contato h2,
 .portfolio h2 {
     font-family: 'Source Code Pro', monospace;
     color: whitesmoke;
@@ -109,23 +135,20 @@ a:hover {
     display: grid;
     gap: 2em;  
     align-items: center;  
-    justify-content: center;
-    height: 100vh;    
+    justify-content: center;       
 }
 
 @media (min-width: 560px) {
     .portfolio .grid {
         grid-template-columns: 240px 240px;        
-        height: calc(100vh - 41px - 8em);
     }
 }
 
 @media (min-width: 880px) {
     .portfolio .grid {
-        grid-template-columns: repeat(3, 260px);
-        align-items: center;
-        justify-content: center;
-        height: calc(100vh - 8em - 48px);
+        grid-template-columns: repeat(3, 240px);
+        height: calc(100vh - 8em - 41px);        
+        align-items: baseline;
     }
 }
 
@@ -138,6 +161,7 @@ a:hover {
 .portfolio figure {
     text-align: center;
     color: whitesmoke;
+    transition: ease 1s;
 }
 
 .portfolio figure:hover {
@@ -152,6 +176,37 @@ a:hover {
     object-fit: cover;
     object-position: bottom;
     border-radius: 8px;
+    transition: transform ease 500ms;    
+}
+
+.img-portfolio:active,
+.img-portfolio:hover {
+    transform: scale(0.9) rotate(-1deg);
+}
+
+.contato {
+    background-color: whitesmoke;
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a {
+    color: #666;
+    font-size: 4em;
+    transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover  {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgb(255, 115, 0);
+}
+
+.contato .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
 }
 
 .grid figcaption {
