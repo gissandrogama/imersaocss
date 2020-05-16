@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
 <body>    
     <header>
         <nav class="menu">
-            <ul>
+            <ul class="container">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#portfolio">Portifólio</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -26,26 +26,102 @@
             <h2 class="site-subtitle">Web Developer</h2>
         </div>
     </header>
-    <section class="portfolio" id="portfolio">
+    <section class="sobre container" id="sobre">
+        <h2>Sobre</h2>
+  
+        <figure class="avatar">
+          <img src="./imagens/gissandro.jpeg" alt="Gissandro Gama">
+        </figure>
+  
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quidem
+          atque architecto, odit doloremque consectetur vero! Aut fugit neque
+          sequi id non rerum facilis incidunt explicabo. Officia beatae vitae
+          laudantium!
+        </p>
+  
+        <p>
+          Tenetur dicta rem ut aliquid quo eos non expedita impedit. Ipsa sapiente
+          corrupti iusto eum similique voluptatum magni velit sit ab, vitae quas,
+          perspiciatis excepturi, vel quaerat itaque dicta repudiandae?
+        </p>
+  
+        <p>
+          Unde necessitatibus fugiat similique aperiam ipsa voluptatum ex commodi
+          repellendus! Sequi libero accusantium facere quis, dolores voluptate
+          itaque distinctio natus iure, quibusdam eaque. Laborum incidunt nesciunt
+          facere aperiam quibusdam inventore.
+        </p>
+  
+        <p>
+          Unde necessitatibus fugiat similique aperiam ipsa voluptatum ex commodi
+          repellendus! Sequi libero accusantium facere quis, dolores voluptate
+          itaque distinctio natus iure, quibusdam eaque. Laborum incidunt nesciunt
+          facere aperiam quibusdam inventore.
+        </p>
+        <p>
+          Unde necessitatibus fugiat similique aperiam ipsa voluptatum ex commodi
+          repellendus! Sequi libero accusantium facere quis, dolores voluptate
+          itaque distinctio natus iure, quibusdam eaque. Laborum incidunt nesciunt
+          facere aperiam quibusdam inventore.
+        </p>
+  
+        <p>
+          Este site foi construído durante a
+          <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a>
+          
+        </p>
+      </section>
+    <section class="portfolio container" id="portfolio">
         <h2>Portfólio</h2>
         
         <div class="grid">
-            <figure>
-                <img class="img-portfolio" src="./imagens/portifolio/backend.jpg" alt="Backend">
-                <figcaption>Backend</figcaption>
-            </figure>
-            <figure>
-                <img class="img-portfolio" src="./imagens/portifolio/mobile.jpeg" alt=">Mobile">
-                <figcaption>Mobile</figcaption>
-            </figure>
-            <figure>
-                <img class="img-portfolio" src="./imagens/portifolio/web-developer.jpg" alt="Web develope">
-                <figcaption>Web developer</figcaption>
-            </figure>
-            <figure>
-                <img class="img-portfolio" src="./imagens/portifolio/node-react.jpg" alt="Node React">
-                <figcaption>Node e React</figcaption>
-            </figure>
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./imagens/portifolio/backend.jpg" alt="Backend">                        
+                    </figure>
+                    <div class="card-back">
+                        Backend
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./imagens/portifolio/mobile.jpeg" alt=">Mobile">
+                        
+                    </figure>
+                    <div class="card-back">
+                        Mobile
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./imagens/portifolio/web-developer.jpg" alt="Web develope">
+                        
+                    </figure>
+                    <div class="card-back">
+                        web developer
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./imagens/portifolio/node-react.jpg" alt="Node React">
+                        
+                    </figure>
+                    <div class="card-back">
+                        Node e React
+                    </div>
+                </div>
+            </div>
         </div>                 
     </section>
     <section class="contato" id="contato">
@@ -66,13 +142,14 @@
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
-            <form action="">
-                <label for="">Nome: </label>
+            <form class="formulario" action="">
+                <label for="">Nome </label>
                 <input type="text">
                 <label for="">E-mail</label>
                 <input type="text">
                 <label for="">Mensagem</label>
-                <input type="text-area">
+                <textarea type="textarea" maxlength="500" rows="6" cols="30"></textarea>
+                <input type="submit" value="enviar">
             </form>			
 		</div>
 	</section>    

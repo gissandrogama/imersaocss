@@ -41,12 +41,13 @@ header {
     align-items: center;
     justify-content: center;
 }
-  
+
 .menu {
     background-color: rgba(8, 8, 8, 0.459);
     position: fixed;
     top: 0;
     width: 100vw;
+    box-shadow: 1px 2px 10px rgba(255, 115, 0, .3);
     z-index: 1;
 }
   
@@ -116,19 +117,57 @@ a:hover {
     text-align: center;
 }
 
+.sobre,
 .contato,
 .portfolio {
     padding: 2em;
     min-height: 100vh;
 }
 
-.contato h2,
+@media (min-width: 1200px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+    }
+}
+
+.sobre h2,
 .portfolio h2 {
     font-family: 'Source Code Pro', monospace;
     color: whitesmoke;
     margin-bottom: 0.7em;
     font-size: 2em;
-    text-align: center;
+}
+
+.sobre p {
+    color: whitesmoke;
+    text-indent: 1.5em;
+    margin-bottom: 1.4em;
+    text-align: justify;
+}
+
+.avatar {
+    max-height: 350px;
+    max-width: 350px;
+}
+
+.avatar img{
+    height: 100%;
+    width: 100%;
+}
+
+.sobre .avatar {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-left: 2em;
+}
+
+
+@media (min-width: 600px) {
+    .sobre .avatar {
+      clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+      float: right;
+   }
 }
 
 .portfolio .grid {
@@ -137,6 +176,8 @@ a:hover {
     align-items: center;  
     justify-content: center;       
 }
+
+
 
 @media (min-width: 560px) {
     .portfolio .grid {
@@ -158,15 +199,44 @@ a:hover {
     }    
 }
 
+.flip-card {
+    height: 220px;
+    perspective: 1000px;
+}
+  
+.flip-card:hover .card {
+    transform: rotateY(180deg);
+}
+  
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+  
+.card-front, 
+.card-back {
+    backface-visibility: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+ 
+.card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    height: 220px;
+    width: 100%;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+} 
+
 .portfolio figure {
     text-align: center;
     color: whitesmoke;
-    transition: ease 1s;
-}
-
-.portfolio figure:hover {
-    box-shadow: 1px 1px 10px rgb(255, 115, 0);
-    cursor: pointer;
 }
 
 .img-portfolio { 
@@ -179,13 +249,20 @@ a:hover {
     transition: transform ease 500ms;    
 }
 
-.img-portfolio:active,
-.img-portfolio:hover {
-    transform: scale(0.9) rotate(-1deg);
+.contato .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
 }
 
 .contato {
     background-color: whitesmoke;
+}
+
+.contato h2{
+    font-family: 'Source Code Pro', monospace;
+    color: #666;
+    margin-bottom: 0.7em;
+    font-size: 2em;
 }
 
 .contato .icons {
@@ -204,15 +281,44 @@ a:hover {
   text-shadow: 0px 0px 10px rgb(255, 115, 0);
 }
 
-.contato .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
+.contato .formulario {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-weight: 700;    
 }
 
-.grid figcaption {
+.formulario input {
+    height: 35px;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.8em;
+    color: #666;
+    font-weight: 700;
+}
+
+.formulario textarea {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.8em;
+    color: #666;
+    font-weight: 700;
+}
+
+/* .grid figcaption {
     font-size: 1em;
     padding: 5px 2px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgb(255, 115, 0);
     margin: 5px 0 auto;
-}
+} */
