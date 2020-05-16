@@ -158,26 +158,22 @@ a:hover {
 }
 
 .sobre .avatar {
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: circle(67.7% at 26% 36%);
     margin-left: 2em;
 }
 
 
 @media (min-width: 600px) {
     .sobre .avatar {
-      clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+      clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
       float: right;
    }
 }
 
 .portfolio .grid {
     display: grid;
-    gap: 2em;  
-    align-items: center;  
-    justify-content: center;       
+    gap: 2em;    
 }
-
-
 
 @media (min-width: 560px) {
     .portfolio .grid {
@@ -185,17 +181,20 @@ a:hover {
     }
 }
 
-@media (min-width: 880px) {
+@media (min-width: 860px) {
     .portfolio .grid {
         grid-template-columns: repeat(3, 240px);
         height: calc(100vh - 8em - 41px);        
-        align-items: baseline;
+        align-content: center;
+        justify-content: center;
     }
 }
 
 @media(min-width: 1200px){
     .portfolio .grid {
-        grid-template-columns: repeat(4, 240px);                
+        grid-template-columns: repeat(4, 240px);
+        align-content: center;
+        justify-content: center;               
     }    
 }
 
