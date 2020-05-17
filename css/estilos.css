@@ -266,7 +266,7 @@ a:hover {
     background-color: whitesmoke;
 }
 
-.contato h2{
+.contato h2 {
     font-family: 'Source Code Pro', monospace;
     color: #666;
     margin-bottom: 0.7em;
@@ -278,13 +278,14 @@ a:hover {
 }
 
 .contato a {
-    color: #666;
+    color: rgb(133, 131, 131);
     font-size: 4em;
-    transition: text-shadow 1s;
+    transition: text-shadow 1s, color 1s;
 }
 
 .contato a:active,
 .contato a:hover  {
+  color: whitesmoke;  
   text-decoration: none;
   text-shadow: 0px 0px 10px rgb(255, 115, 0);
 }

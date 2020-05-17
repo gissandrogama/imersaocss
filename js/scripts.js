@@ -17,7 +17,7 @@ function scrollToId(event) {
     event.preventDefault();
     menuItems.forEach(btn => btn.classList.remove(activeclass));
     this.classList.add(activeclass)
-    const to = getScrollTopByHref(event.target) - 43;    
+    const to = getScrollTopByHref(event.target);    
     scrollPosition(to);    
 }
 
